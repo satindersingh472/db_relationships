@@ -57,7 +57,7 @@ CREATE TABLE `tax_account` (
   UNIQUE KEY `tax_account_unique_key` (`id`,`citizen_id`),
   KEY `tax_account_FK` (`citizen_id`),
   CONSTRAINT `tax_account_FK` FOREIGN KEY (`citizen_id`) REFERENCES `citizen` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,7 +66,7 @@ CREATE TABLE `tax_account` (
 
 LOCK TABLES `tax_account` WRITE;
 /*!40000 ALTER TABLE `tax_account` DISABLE KEYS */;
-INSERT INTO `tax_account` VALUES (1,NULL,'2021-01-01','123456');
+INSERT INTO `tax_account` VALUES (2,1,'2021-01-01','123456');
 /*!40000 ALTER TABLE `tax_account` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,4 +83,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-13 19:06:05
+-- Dump completed on 2022-09-13 19:08:01
